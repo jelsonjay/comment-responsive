@@ -1,0 +1,154 @@
+/* Import Google Font - Lato */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(199, 81%, 58%);
+  --bg: hsl(219, 17%, 14%);
+  --card: #e4e9f7;
+  --black: #000;
+  --white: #fafafa;
+  --text: hsl(219, 17%, 20%);
+  --start: #f9d71c;
+  --lighten: #f2f2f2;
+  --light: #eae8e5;
+  --searchBar: #eaf3fa;
+  --search-text: hsl(219, 17%, 14%);
+  --fontFamily: "Poppins", sans-serif;
+  --boxShadow: 0 5px 10px 0 rgba(0, 0, 0, 0.12);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fontFamily);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+/*=========MAIN============*/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*=========CONTAINER SECTION============*/
+.comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.heading {
+  font-size: 1.2rem;
+  color: var(--card);
+  padding: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.comment-card {
+  width: 500px;
+  box-shadow: var(--boxShadow);
+  background-color: var(--card);
+  padding: 1.25rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+.comment-card:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.5s;
+}
+
+.user__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.625rem;
+  outline: 2px solid var(--primary);
+}
+.user__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user-name {
+  display: flex;
+  flex-direction: column;
+}
+.user-name strong {
+  color: #bcc4da;
+  font-size: 1.2rem;
+  letter-spacing: 0.7px;
+}
+.user-name span {
+  color: #979797;
+  font-size: 0.9rem;
+}
+.reviews {
+  color: var(--start);
+  font-size: 0.9rem;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.comment-content p {
+  letter-spacing: 0.8px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+::selection {
+  color: var(--white);
+  background-color: #000;
+}
+/*=========RESPONSIVE============*/
+@media (max-width: 1060px) {
+  .comment-card {
+    padding: 0.625rem;
+    width: 45%;
+  }
+}
+@media (max-width: 678px) {
+  .comment-card {
+    padding: 1rem;
+    width: 100%;
+  }
+  .heading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 348px) {
+  .card {
+    flex-wrap: wrap;
+    margin-bottom: 0.625rem;
+  }
+  .reviews {
+    margin-top: 0.625rem;
+  }
+}
